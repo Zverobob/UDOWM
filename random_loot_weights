@@ -12,8 +12,8 @@ lootQuality = Math.random() * (max - min) + min;
 let rez = 0;
 for (let i = 0; i < weight.length; i++){
   if ( lootQuality <= max ) {
-    rez = i
+    rez = i;
   }
 }
-rr = rr[rez];
+rr = r[rez];
 `Выпал ${rr} ${rl}! ${rp} ${rl} ${rs}!`;

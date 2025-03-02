@@ -15,9 +15,5 @@ for (let i = 0; i < weight.length; i++){
     rez = i
   }
 }
-while (lootQuality <= max ){
-	rez += 1;
-	max -= weight[rez];
-}
 rr = rr[rez];
 `Выпал ${rr} ${rl}! ${rp} ${rl} ${rs}!`;

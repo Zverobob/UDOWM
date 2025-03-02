@@ -8,10 +8,11 @@ for (let i = 0; i < weight.length; i++ ) {
   max += weight[i];
 }
 let min = 1;
-lootQuality = Math.random() * (max - min) + min;
+lootQuality = Math.floor((Math.random() * max) + min);
 let rez = 0;
 for (let i = 0; i < weight.length; i++){
   if ( lootQuality <= max ) {
+    max -= weight[i];
     rez = i;
   }
 }

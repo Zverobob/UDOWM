@@ -22,12 +22,12 @@ rr = r[rez];
 let item_gender = ["m","m","m","m","m","m","m","n","n","m","w","w","m","m","m"];
 if (item_gender[ln] == "n"){
   if (rp.endsWith("ый") || rp.endsWith("ий") || rp.endsWith("ой")){
-    rl = rl[:-2] + "ое";
+    rl = rl.slice(0, -2) + "ое";
   }
 }
 elif (item_gender[ln] == "w"){
   if (rp.endswith("ый") || rp.endswith("ий") || rp.endswith("ой")){
-    rl = rl[:-2] + "ая";
+    rl = rl.slice(0, -2) + "ая";
   }
 }
 

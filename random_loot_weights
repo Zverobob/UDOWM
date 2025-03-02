@@ -1,0 +1,23 @@
+let rr = 0;
+let rp = p[p.length * Math.random() | 0]; 
+let rs = s[s.length * Math.random() | 0]; 
+let rl = l[l.length * Math.random() | 0];
+weight = [80,60,30,20,10,5,1];
+let max = 0;
+for (let i = 0; i < weight.length; i++ ) {
+  max += weight[i];
+}
+let min = 1;
+lootQuality = Math.random() * (max - min) + min;
+let rez = 0;
+for (let i = 0; i < weight.length; i++){
+  if ( lootQuality <= max ) {
+    rez = i
+  }
+}
+while (lootQuality <= max ){
+	rez += 1;
+	max -= weight[rez];
+}
+rr = rr[rez];
+`Выпал ${rr} ${rl}! ${rp} ${rl} ${rs}!`;

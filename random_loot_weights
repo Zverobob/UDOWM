@@ -22,23 +22,23 @@ rr = r[rez];
 let item_gender = ["m","m","n","n","m","m","m","R","m","m","m","w","m","m","m"];
 if (item_gender[ln] == "n"){
   if (rp.endsWith("ый") || rp.endsWith("ий") || rp.endsWith("ой")){
-    rl = rl.slice(0, -2) + "ое";
+    rp = rp.slice(0, -2) + "ое";
   }
 }
 else if (item_gender[ln] == "w"){
   if (rp.endsWith("ый") || rp.endsWith("ий") || rp.endsWith("ой")){
-    rl = rl.slice(0, -2) + "ая";
+    rp = rp.slice(0, -2) + "ая";
   }
 }
 else if (item_gender[ln] == "R"){
   if (rp.endsWith("ый") || rp.endsWith("ий")){
-    rl = rl.slice(0, -1) + "e";
+    rp = rp.slice(0, -1) + "e";
   }
   else if ( rp.endsWith("ой") ){
-    rl = rl.slice(0, -2) + "ыe";
+    rp = rp.slice(0, -2) + "ыe";
   }
   else if ( rp.endsWith("йся") ){
-    rl = rl.slice(0, -2) + "еся";
+    rp = rp.slice(0, -2) + "еся";
   }
 }
 

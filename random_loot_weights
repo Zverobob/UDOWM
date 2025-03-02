@@ -26,23 +26,23 @@ if (item_gender[ln] == "n"){
   }
 }
 else if (item_gender[ln] == "w"){
-  if (rp.endswith("ый") || rp.endswith("ий") || rp.endswith("ой")){
+  if (rp.endsWith("ый") || rp.endsWith("ий") || rp.endsWith("ой")){
     rl = rl.slice(0, -2) + "ая";
   }
 }
 else if (item_gender[ln] == "R"){
-  if (rp.endswith("ый") || rp.endswith("ий")){
+  if (rp.endsWith("ый") || rp.endsWith("ий")){
     rl = rl.slice(0, -1) + "e";
   }
-  else if ( rp.endswith("ой") ){
+  else if ( rp.endsWith("ой") ){
     rl = rl.slice(0, -2) + "ыe";
   }
-  else if ( rp.endswith("йся") ){
+  else if ( rp.endsWith("йся") ){
     rl = rl.slice(0, -2) + "еся";
   }
 }
 
-let end_quote = `Выпавыший предмет: ${rr} `;
+let end_quote = `Выпал ${rr} предмет: `;
 if (rr >= 1){
   end_quote += `${rp} `;
 }

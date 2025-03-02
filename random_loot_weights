@@ -19,7 +19,7 @@ for (let i = 0; i < weight.length; i++){
 }
 rr = r[rez];
 
-let item_gender = ["m","m","m","m","m","m","m","n","n","m","w","w","m","m","m"];
+let item_gender = ["m","m","n","n","m","m","m","R","m","m","m","w","m","m","m"];
 if (item_gender[ln] == "n"){
   if (rp.endsWith("ый") || rp.endsWith("ий") || rp.endsWith("ой")){
     rl = rl.slice(0, -2) + "ое";
@@ -30,8 +30,19 @@ else if (item_gender[ln] == "w"){
     rl = rl.slice(0, -2) + "ая";
   }
 }
+else if (item_gender[ln] == "R"){
+  if (rp.endswith("ый") || rp.endswith("ий")){
+    rl = rl.slice(0, -1) + "e";
+  }
+  else if ( rp.endswith("ой") ){
+    rl = rl.slice(0, -2) + "ыe";
+  }
+  else if ( rp.endswith("йся") ){
+    rl = rl.slice(0, -2) + "еся";
+  }
+}
 
-let end_quote = `Выпал ${rr} ${rl}! `;
+let end_quote = `Выпавыший предмет: ${rr} `;
 if (rr >= 1){
   end_quote += `${rp} `;
 }

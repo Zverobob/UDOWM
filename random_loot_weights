@@ -31,7 +31,7 @@ else if (item_gender[ln] == "w"){
   }
 }
 
-let end quote = f"Выпал ${rr} ${rl}! ";
+let end_quote = f"Выпал ${rr} ${rl}! ";
 if (rr >= 1){
   end_quote += f"${rp} ";
 }

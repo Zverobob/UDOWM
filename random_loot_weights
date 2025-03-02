@@ -25,13 +25,13 @@ if (item_gender[ln] == "n"){
     rl = rl.slice(0, -2) + "ое";
   }
 }
-elif (item_gender[ln] == "w"){
+else if (item_gender[ln] == "w"){
   if (rp.endswith("ый") || rp.endswith("ий") || rp.endswith("ой")){
     rl = rl.slice(0, -2) + "ая";
   }
 }
 
-let end quote = f"Выпал ${rr} ${rl}! " ${rp} ${rl} ${rs}!`;
+let end quote = f"Выпал ${rr} ${rl}! ";
 if (rr >= 1){
   end_quote += f"${rp} ";
 }

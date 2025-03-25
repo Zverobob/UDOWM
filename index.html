@@ -47,7 +47,9 @@
     }
   }
   
-  let end_quote = `Выпал ${rr} Предмет: `;
+  let end_quote = ``;
+  if (ul == "moderator" | ul == "owner" ){end_quote += `/announce` }
+  end_quote += `Выпал ${rr} Предмет: `;
   if ( rez < 6){
       if (rez >= 1){
         end_quote += `${rp} `;
